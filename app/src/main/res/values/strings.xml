@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MTG Helper</string>
+    <string name="game">Game</string>
+    <string name="collection">Collection</string>
+    <string name="search">Search</string>
+    <string name="aboutMe">About Me</string>
+    <string name="next">Next</string>
+    <string name="exit">Exit</string>
+    <string name="magic_the_gathering">Magic the Gathering</string>
+    <string name="exit_btn">Exit</string>
+    <string name="exit_app">Chcete ukoncit aplikaci ?</string>
+    <string name="card_search_hint">Napis hledanou kartu</string>
+</resources>

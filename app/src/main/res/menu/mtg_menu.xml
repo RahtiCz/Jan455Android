@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuGame"
+        android:icon="@drawable/ico_game"
+        android:title="@string/game"/>
+
+    <item android:id="@+id/menuCollection"
+        android:icon="@drawable/ico_collection"
+        android:title="@string/collection"/>
+
+    <item android:id="@+id/menuSearch"
+        android:icon="@drawable/ico_magic"
+        android:title="@string/search"/>
+
+    <item android:title="@string/next">
+        <menu>
+            <item android:id="@+id/menuAbout"
+                android:icon="@drawable/ico_about"
+                android:title="@string/aboutMe"/>
+
+            <item android:id="@+id/menuExit"
+                android:icon="@drawable/ico_exit"
+                android:title="@string/exit"/>
+        </menu>
+
+    </item>
+
+</menu>

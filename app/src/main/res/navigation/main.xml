@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuAbout">
+
+    <fragment
+        android:id="@+id/menuAbout"
+        android:name="com.example.jan455app.AboutMeFragment"
+        android:label="About Me"
+        tools:layout="@layout/fragment_about_me" />
+    <fragment
+        android:id="@+id/menuCollection"
+        android:name="com.example.jan455app.CollectionFragment"
+        android:label="My Collection"
+        tools:layout="@layout/fragment_collection" />
+    <fragment
+        android:id="@+id/menuGame"
+        android:name="com.example.jan455app.GameFragment"
+        android:label="My Game"
+        tools:layout="@layout/fragment_game" />
+    <fragment
+        android:id="@+id/menuSearch"
+        android:name="com.example.jan455app.SearchFragment"
+        android:label="Search Card"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/menuExit"
+        android:name="com.example.jan455app.ExitFragment"
+        android:label="Ukonceni Aplikace"
+        tools:layout="@layout/fragment_exit" />
+</navigation>
