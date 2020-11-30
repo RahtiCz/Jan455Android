@@ -9,5 +9,10 @@
     <string name="magic_the_gathering">Magic the Gathering</string>
     <string name="exit_btn">Exit</string>
     <string name="exit_app">Chcete ukoncit aplikaci ?</string>
-    <string name="card_search_hint">Napis hledanou kartu</string>
+    <string name="card_search_hint">Insert card name</string>
+    <string name="add_to_collection">Add To Collection</string>
+    <string name="input_card_name">Input card name</string>
+    <string name="card_count">Card count</string>
+    <string name="is_foil">Is Foil</string>
+    <string name="is_signed">Is signed</string>
 </resources>

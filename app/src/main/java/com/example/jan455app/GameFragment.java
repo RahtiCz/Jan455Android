@@ -62,8 +62,8 @@ public class GameFragment extends Fragment {
 
 
     boolean isGameOn = false;
-    private TextView timer;
-    private Button btnStart;
+    private TextView timer, txtPlayer1;
+    private Button btnStart, btnP1Plus, btnP1Minus, btnP2Plus, btnP2Minus;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -72,6 +72,26 @@ public class GameFragment extends Fragment {
 
         btnStart = (Button) v.findViewById(R.id.btnGameStart);
         timer = (TextView) v.findViewById(R.id.gameTime) ;
+        txtPlayer1 = (TextView) v.findViewById(R.id.txtPlayer1) ;
+        btnP1Minus = (Button) v.findViewById(R.id.buttonPlayer1Minus);
+        btnP1Plus = (Button) v.findViewById(R.id.buttonPlayer1Plus);
+
+        btnP1Plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int value = Integer.parseInt(txtPlayer1.getText().toString()) + 1;
+                txtPlayer1.setText(Integer.toString(value));
+            }
+        });
+
+        btnP1Minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int value = Integer.parseInt(txtPlayer1.getText().toString()) - 1;
+                txtPlayer1.setText(Integer.toString(value));
+            }
+        });
+
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override

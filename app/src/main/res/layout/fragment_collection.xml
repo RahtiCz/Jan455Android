@@ -1,15 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CollectionFragment">
 
-    <TextView
+    <EditText
+        android:id="@+id/txtCardName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/input_card_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/txtCardCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_margin="10dp"
+        android:hint="@string/card_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCardName" />
+
+    <CheckBox
+        android:id="@+id/chkIsFoil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/collection"
-        android:layout_gravity="center"
-        android:textSize="30dp"/>
+        android:text="@string/is_foil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCardCount"
+        app:layout_constraintEnd_toStartOf="@id/chkIsSigned"/>
 
-</FrameLayout>
+
+    <CheckBox
+        android:id="@+id/chkIsSigned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/is_signed"
+        app:layout_constraintStart_toEndOf="@+id/chkIsFoil"
+        app:layout_constraintTop_toBottomOf="@+id/txtCardCount"
+        app:layout_constraintEnd_toStartOf="@id/swIsReguired"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swIsReguired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Requested more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chkIsSigned"
+        app:layout_constraintTop_toBottomOf="@+id/txtCardCount"
+        app:layout_constraintBottom_toTopOf="@id/btnAddCard"/>
+
+    <Button
+        android:id="@+id/btnAddCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_collection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkIsSigned" />
+
+    <ListView
+        android:id="@+id/cardsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnAddCard" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

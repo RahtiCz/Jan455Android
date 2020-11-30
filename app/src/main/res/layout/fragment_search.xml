@@ -13,16 +13,27 @@
         android:hint="@string/card_search_hint">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtSearchedCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp" />
+            android:layout_margin="10dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/btnSearchCard"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="@string/search"/>
+
+    <ImageView
+        android:id="@+id/imageCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:contentDescription="Obr" />
+
 
 
 </LinearLayout>
