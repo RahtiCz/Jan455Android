@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    app:startDestination="@id/menuAbout">
+    app:startDestination="@id/menuHomePage">
 
     <fragment
         android:id="@+id/menuAbout"
@@ -30,4 +30,9 @@
         android:name="com.example.jan455app.ExitFragment"
         android:label="Ukonceni Aplikace"
         tools:layout="@layout/fragment_exit" />
+    <fragment
+        android:id="@+id/menuHomePage"
+        android:name="com.example.jan455app.HomePage"
+        android:label=" "
+        tools:layout="@layout/fragment_home_page" />
 </navigation>
