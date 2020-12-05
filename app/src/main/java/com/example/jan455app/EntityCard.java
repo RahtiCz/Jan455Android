@@ -18,8 +18,7 @@ public class EntityCard {
     public EntityCard() {
     }
 
-    public EntityCard(int id, String cardName, int cardCount, Boolean isFoil, Boolean isSigned, Boolean required, @Nullable int idDeck) {
-        this.id = id;
+    public EntityCard(String cardName, int cardCount, Boolean isFoil, Boolean isSigned, Boolean required, @Nullable int idDeck) {
         this.cardName = cardName;
         this.cardCount = cardCount;
         this.isFoil = isFoil;
@@ -28,7 +27,12 @@ public class EntityCard {
         this.idDeck = idDeck;
     }
 
-    @Override
+    public EntityCard(int id, String cardName, int cardCount, Boolean isFoil, Boolean isSigned, Boolean required, @Nullable int idDeck) {
+        this(cardName, cardCount, isFoil, isSigned, required, idDeck);
+        this.id = id;
+    }
+
+  /*  @Override
     public String toString() {
         return "EntityCard{" +
                 "id=" + id +
@@ -39,6 +43,11 @@ public class EntityCard {
                 ", required=" + required +
                 ", idDeck=" + idDeck +
                 '}';
+    }*/
+
+    @Override
+    public String toString(){
+        return "("+id+") "+ cardName +" [" + cardCount + "]  Foil: " + (isFoil? "Y": "N") + " Signed: " + (isSigned? "Y":"N") + (required? " {NEED}" : " {NO NEED}");
     }
 
 

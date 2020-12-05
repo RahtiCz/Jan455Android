@@ -10,7 +10,7 @@
     <string name="exit_btn">Exit</string>
     <string name="exit_app">Chcete ukoncit aplikaci ?</string>
     <string name="card_search_hint">Insert card name</string>
-    <string name="add_to_collection">Add To Collection</string>
+    <string name="add_to_collection">Add Card</string>
     <string name="input_card_name">Input card name</string>
     <string name="card_count">Card count</string>
     <string name="is_foil">Is Foil</string>
@@ -28,4 +28,7 @@
     <string name="minus">-</string>
     <string name="gameTime">35:00</string>
     <string name="start_game">START GAME</string>
+    <string name="show_only_required">Only Required</string>
+    <string name="show_all_cards">All Cards</string>
+    <string name="requested_more">Requested more</string>
 </resources>

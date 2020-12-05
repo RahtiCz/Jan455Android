@@ -17,6 +17,15 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="10dp"/>
 
+    <CheckBox
+        android:id="@+id/chkIsFoil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/is_foil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCardCount"
+        app:layout_constraintEnd_toStartOf="@id/chkIsSigned"/>
+
     <EditText
         android:id="@+id/txtCardCount"
         android:layout_width="match_parent"
@@ -28,15 +37,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCardName" />
 
-    <CheckBox
-        android:id="@+id/chkIsFoil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/is_foil"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCardCount"
-        app:layout_constraintEnd_toStartOf="@id/chkIsSigned"/>
-
 
     <CheckBox
         android:id="@+id/chkIsSigned"
@@ -45,17 +45,35 @@
         android:text="@string/is_signed"
         app:layout_constraintStart_toEndOf="@+id/chkIsFoil"
         app:layout_constraintTop_toBottomOf="@+id/txtCardCount"
-        app:layout_constraintEnd_toStartOf="@id/swIsReguired"/>
+        app:layout_constraintEnd_toStartOf="@id/swIsRequired"/>
 
     <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/swIsReguired"
+        android:id="@+id/swIsRequired"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Requested more"
+        android:text="@string/requested_more"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/chkIsSigned"
         app:layout_constraintTop_toBottomOf="@+id/txtCardCount"
         app:layout_constraintBottom_toTopOf="@id/btnAddCard"/>
+
+    <Button
+        android:id="@+id/btnShowAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_all_cards"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnShowRequired"
+        app:layout_constraintTop_toBottomOf="@id/chkIsFoil"/>
+
+    <Button
+        android:id="@+id/btnShowRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_only_required"
+        app:layout_constraintEnd_toStartOf="@id/btnAddCard"
+        app:layout_constraintStart_toEndOf="@id/btnShowAll"
+        app:layout_constraintTop_toBottomOf="@id/chkIsSigned"/>
 
     <Button
         android:id="@+id/btnAddCard"
@@ -63,15 +81,19 @@
         android:layout_height="wrap_content"
         android:text="@string/add_to_collection"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chkIsSigned" />
+        app:layout_constraintTop_toBottomOf="@+id/swIsRequired" />
+
 
     <ListView
         android:id="@+id/cardsList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btnAddCard" />
-
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnShowRequired" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
